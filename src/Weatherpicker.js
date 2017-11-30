@@ -50,8 +50,11 @@ class Weatherpicker extends Component {
     var POSTurl = 'www.futurestaybeta.com/test3.php'
 
     var { val } = this.state
+
+    var obj = {}
+    obj["value"] = val
     
-    axios.post(POSTurl, val)
+    axios.post(POSTurl, obj)
     .then(res => {
       console.log(`${res.json()} POSTed to ${POSTurl}`);
       // this.loadAPIdata()  
