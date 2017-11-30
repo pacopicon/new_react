@@ -63,10 +63,10 @@ class Weatherpicker extends Component {
   }
 
   parseData(data, dayNum, opt) {
-    if (opt = "day") {
-      var date = new Date(data.list[dayNum].dt)
-      var str = date.ToDateString()
-      return str
+    if (opt == "day") {
+      var date = new Date(data.list[dayNum].dt_txt)
+      var dateStr = date.toDateString()
+      return dateStr
     } else {
       var pres = data.list[dayNum].main.pressure
       return pres

@@ -12,12 +12,11 @@ class ListWeather extends Component {
         <form className="submitWeather" onSubmit={ this.props.handleSubmit }>
         <select value={this.props.val} onChange={this.props.handleSelect}>
           <option value="Monday">pressure on {this.props.parseData(data, 0, "day")} : {this.props.parseData(data, 0, "pres")}</option> 
-          <option value="Tuesday">pressure on {this.props.parseData(data, 1, "day")} : {this.props.parseData(data, 1, "pres")}</option>
-          <option value="Wednesday">pressure on {this.props.parseData(data, 2, "day")} : {this.props.parseData(data, 2, "pres")}</option> 
-          <option value="Thursday">pressure on {this.props.parseData(data, 3, "day")} : {this.props.parseData(data, 3, "pres")}</option>
-          <option value="Friday">pressure on {this.props.parseData(data, 4, "day")} : {this.props.parseData(data, 4, "pres")}</option> 
-          <option value="Saturday">pressure on {this.props.parseData(data, 5, "day")} : {this.props.parseData(data, 5, "pres")}</option>
-          <option value="Sunday">pressure on {this.props.parseData(data, 6, "day")} : {this.props.parseData(data, 6, "pres")}</option> 
+          <option value="Tuesday">pressure on {this.props.parseData(data, 7, "day")} : {this.props.parseData(data, 7, "pres")}</option>
+          <option value="Wednesday">pressure on {this.props.parseData(data, 14, "day")} : {this.props.parseData(data, 14, "pres")}</option> 
+          <option value="Thursday">pressure on {this.props.parseData(data, 21, "day")} : {this.props.parseData(data, 21, "pres")}</option>
+          <option value="Friday">pressure on {this.props.parseData(data, 28, "day")} : {this.props.parseData(data, 28, "pres")}</option> 
+          <option value="Saturday">pressure on {this.props.parseData(data, 35, "day")} : {this.props.parseData(data, 35, "pres")}</option> 
         </select>
         
         <input className="post" type="submit" value="Submit" />
@@ -32,7 +31,7 @@ class ListWeather extends Component {
     
     return (
       <div className="weatherList">
-        { typeof data !== 'undefined'
+        { typeof data.list !== 'undefined'
           ? this.renderWeather(data)
           : <div></div>
         }
